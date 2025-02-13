@@ -1,0 +1,17 @@
+.table_container {
+  display: flex;
+  justify-content: center;
+}
+
+.custom_table {
+  width: 100%;
+}
+
+.custom_table th, .custom_table td {
+  padding: 16px 12px;
+  text-align: left;
+}
+
+.custom_table tbody tr {
+  border-bottom: 1px solid #f2f2f2;
+}
