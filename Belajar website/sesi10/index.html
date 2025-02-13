@@ -1,0 +1,89 @@
+<style>
+  *,
+  html,
+  body {
+    margin: 0;
+    padding: 0;
+    box-sizing: 0;
+  }
+
+.container {
+    max-width: 50%;
+    margin: 0 auto;
+    position: relative;
+}
+
+video {
+    display: block;
+    width: 100%;
+    border: 5px solid rebeccapurple;
+}
+
+.video-component {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    padding: 8px 10px;
+}
+
+  .btn {
+    border: none;
+    padding: 10px;
+    font-weight: 800;
+    cursor: pointer;
+    font-size: 20px;
+    border-radius: 9px;
+  }
+  .btn-play {
+    background-color: aqua;
+    color: black;
+  }
+
+  .btn-pause {
+    background-color: aqua;
+    color: black;
+  }
+
+  .btn-minimize {
+    background-color: aqua;
+    color: black;
+  }
+</style>
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Video Prabowo Pidato Luar Negeri</title>
+  </head>
+  <body>
+    <div class="container">
+      <video width="720">
+        <source src="./assets/videoplayback.mp4" type="video/mp4" />
+      </video>
+      <div class="video-component">
+        <button onclick="play()" class="btn btn-play">PLAY</button>
+        <button onclick="pause()" class="btn btn-pause">PAUSE</button>
+        <button onclick="minimize()" class="btn btn-minimize">MINIMIZE</button>
+      </div>
+    </div>
+  </body>
+
+  <script>
+    const videoComponent = document.querySelector("video")
+    function play() {
+      console.log("playing");
+      videoComponent.play ()
+    }
+    function pause() {
+      console.log("pause");
+      videoComponent.pause ()
+    }
+
+    function minimize() {
+      console.log("minimize");
+      videoComponent.requestPictureInPicture()
+    }
+  </script>
+</html>

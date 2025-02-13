@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css"/>
+    <title>Belajar Coding</title>
+</head>
+<body>
+    <div class="container">
+        <nav>
+            <a onclick="reRender()" id="home">Home</a>
+            <a onclick="darkMode()" id="mode">Mode</a>
+        </nav>
+        <h1>Sesi 6</h1>
+        <p class="Info" id="Info"></p>
+    </div>
+
+    <!-- initializing function -->
+    <script>
+        let body = document.body;
+        let Info = document.getElementById('Info');
+        let mode = document.getElementById('mode');
+        let home = document.getElementById('home');
+        const darkLimit = 5;
+        let darkCounter = 0;
+        let darkRemainingLeft; 
+
+        function darkMode() {
+            if (darkRemainingLeft == 1) {
+                Info.textContent = "jumlah penggunaan dark mode sudah mencapai batas";
+                mode.style.display = 'none';
+                home.textContent="RESTART";
+                return;
+            }
+
+            darkCounter += 1;
+            darkRemainingLeft = darkLimit - darkCounter;
+            Info.textContent = `Dark Mode dipakai ${darkCounter} kali, tersisa ${darkRemainingLeft} kali lagi`;
+            body.classList.toggle('dark');
+        }
+
+        function reRender() {
+            location.reload();
+        }
+    </script>
+</body>
+</html>

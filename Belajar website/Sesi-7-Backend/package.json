@@ -1,0 +1,16 @@
+{
+  "name": "sesi-7-backend",
+  "version": "1.0.0",
+  "description": "sesi 7 belajar backend",
+  "main": "index.js",
+  "scripts": {
+    "start": "nodemon index.js"
+  },
+
+
+  "author": "dzaki",
+  "license": "ISC",
+  "dependencies": {
+    "nodemon": "^3.1.9"
+  }
+}
